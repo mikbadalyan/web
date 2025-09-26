@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates | Mikayel Badalyan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="background">
+        <div class="shape circle"></div>
+        <div class="shape triangle"></div>
+        <div class="shape square"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="certificates.html" class="nav-link active">Certificates</a></li>
+                <li><a href="awards.html" class="nav-link">Awards</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="volunteering.html" class="nav-link">Volunteering</a></li>
+            </ul>
+            <div class="language-selector">
+                <a href="#" class="language-link active" data-lang="en">
+                    <img src="flagus.png" alt="English" class="flag-icon">
+                    <span>EN</span>
+                </a>
+                <a href="#" class="language-link" data-lang="fr">
+                    <img src="franceflag.png" alt="Français" class="flag-icon">
+                    <span>FR</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top">
+        <span>↑</span>
+    </button>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section certificates-section">
+        <div class="container">
+            <h2 class="section-title">Certificates</h2>
+            <div class="certificates-grid">
+                <div class="certificate-card" data-certificate="certificates/DELF.pdf">
+                    <div class="certificate-image">
+                        <img src="cert/delf.png" alt="DELF Certificate" class="certificate-img">
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">DELF B2</h3>
+                        <button class="view-certificate-btn">View Certificate</button>
+                    </div>
+                </div>
+                
+                <div class="certificate-card" data-certificate="certificates/Cambridge B2 First.pdf">
+                    <div class="certificate-image">
+                        <img src="cert/english.png" alt="Cambridge Certificate" class="certificate-img">
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Cambridge B2 First</h3>
+                        <button class="view-certificate-btn">View Certificate</button>
+                    </div>
+                </div>
+                
+                <div class="certificate-card" data-certificate="certificates/SynergySummerSchool.pdf">
+                    <div class="certificate-image">
+                        <img src="cert/synergy.png" alt="Synergy Summer School" class="certificate-img">
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Synergy Summer School</h3>
+                        <button class="view-certificate-btn">View Certificate</button>
+                    </div>
+                </div>
+                
+                <div class="certificate-card" data-certificate="certificates/DroneEdulab.pdf">
+                    <div class="certificate-image">
+                        <img src="cert/drone.png" alt="Drone Edulab" class="certificate-img">
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Drone Edulab</h3>
+                        <button class="view-certificate-btn">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for viewing certificates -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="modal-iframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

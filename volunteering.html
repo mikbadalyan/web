@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteering | Mikayel Badalyan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="background">
+        <div class="shape circle"></div>
+        <div class="shape triangle"></div>
+        <div class="shape square"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li><a href="awards.html" class="nav-link">Awards</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="volunteering.html" class="nav-link active">Volunteering</a></li>
+            </ul>
+            <div class="language-selector">
+                <a href="#" class="language-link active" data-lang="en">
+                    <img src="flagus.png" alt="English" class="flag-icon">
+                    <span>EN</span>
+                </a>
+                <a href="#" class="language-link" data-lang="fr">
+                    <img src="franceflag.png" alt="Français" class="flag-icon">
+                    <span>FR</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top">
+        <span>↑</span>
+    </button>
+
+    <!-- Volunteering Section -->
+    <section id="volunteering" class="section volunteering-section">
+        <div class="container">
+            <h2 class="section-title">Volunteering</h2>
+            <div class="volunteering-content">
+                <div class="volunteering-card" data-volunteering="certificates/SSS23.pdf">
+                    <div class="volunteering-image">
+                        <img src="cert/sss23.png" alt="SSS23 Program" class="volunteering-img">
+                    </div>
+                    <div class="volunteering-info">
+                        <h3 class="volunteering-title">SSS23 Program</h3>
+                        <button class="view-volunteering-btn">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for viewing volunteering certificates -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="modal-iframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

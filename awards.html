@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awards | Mikayel Badalyan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="background">
+        <div class="shape circle"></div>
+        <div class="shape triangle"></div>
+        <div class="shape square"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li><a href="awards.html" class="nav-link active">Awards</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="volunteering.html" class="nav-link">Volunteering</a></li>
+            </ul>
+            <div class="language-selector">
+                <a href="#" class="language-link active" data-lang="en">
+                    <img src="flagus.png" alt="English" class="flag-icon">
+                    <span>EN</span>
+                </a>
+                <a href="#" class="language-link" data-lang="fr">
+                    <img src="franceflag.png" alt="Français" class="flag-icon">
+                    <span>FR</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top">
+        <span>↑</span>
+    </button>
+
+    <!-- Awards Section -->
+    <section id="awards" class="section awards-section">
+        <div class="container">
+            <h2 class="section-title">Awards</h2>
+            <div class="awards-grid">
+                <div class="award-card" data-award="certificates/AIHackathon.pdf">
+                    <div class="award-image">
+                        <img src="cert/aihackathon.png" alt="AI Hackathon" class="award-img">
+                    </div>
+                    <div class="award-info">
+                        <h3 class="award-title">AI Hackathon</h3>
+                        <button class="view-award-btn">View Award</button>
+                    </div>
+                </div>
+                
+                <div class="award-card" data-award="certificates/GreenTech.pdf">
+                    <div class="award-image">
+                        <img src="cert/greentech.png" alt="GreenTech" class="award-img">
+                    </div>
+                    <div class="award-info">
+                        <h3 class="award-title">GreenTech Innovation</h3>
+                        <button class="view-award-btn">View Award</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for viewing awards -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="modal-iframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
