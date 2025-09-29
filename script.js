@@ -198,7 +198,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Modal functionality for certificates, awards, and volunteering
     const modal = document.getElementById('modal');
-    const modalIframe = document.getElementById('modal-iframe');
     const closeBtn = document.querySelector('.close');
     
     // View certificate buttons
@@ -211,9 +210,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                 parentCard.getAttribute('data-volunteering');
             
             if (documentPath) {
-                modalIframe.src = documentPath;
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
+                // Open PDF in a new tab instead of embedding in iframe
+                window.open(documentPath, '_blank');
             }
         });
     });
@@ -221,7 +219,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close modal
     closeBtn.addEventListener('click', function() {
         modal.style.display = 'none';
-        modalIframe.src = '';
         document.body.style.overflow = 'auto';
     });
     
@@ -229,7 +226,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('click', function(event) {
         if (event.target === modal) {
             modal.style.display = 'none';
-            modalIframe.src = '';
             document.body.style.overflow = 'auto';
         }
     });
