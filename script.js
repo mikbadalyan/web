@@ -199,19 +199,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Modal functionality for certificates, awards, and volunteering
     const modal = document.getElementById('modal');
     const closeBtn = document.querySelector('.close');
+    const modalContent = document.getElementById('modal-content');
     
     // View certificate buttons
     const viewCertificateButtons = document.querySelectorAll('.view-certificate-btn, .view-award-btn, .view-volunteering-btn');
     viewCertificateButtons.forEach(button => {
         button.addEventListener('click', function() {
             const parentCard = this.closest('.certificate-card, .award-card, .volunteering-card');
-            const documentPath = parentCard.getAttribute('data-certificate') || 
-                                parentCard.getAttribute('data-award') || 
-                                parentCard.getAttribute('data-volunteering');
+            const imagePath = parentCard.getAttribute('data-certificate') || 
+                             parentCard.getAttribute('data-award') || 
+                             parentCard.getAttribute('data-volunteering');
             
-            if (documentPath) {
-                // Open PDF in a new tab instead of embedding in iframe
-                window.open(documentPath, '_blank');
+            if (imagePath) {
+                // Display image in modal
+                modalContent.innerHTML = `<img src="${imagePath}" alt="Certificate" style="max-width: 100%; max-height: 100%;">`;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
             }
         });
     });
@@ -219,6 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close modal
     closeBtn.addEventListener('click', function() {
         modal.style.display = 'none';
+        modalContent.innerHTML = 'Select a certificate to view';
         document.body.style.overflow = 'auto';
     });
     
@@ -226,6 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('click', function(event) {
         if (event.target === modal) {
             modal.style.display = 'none';
+            modalContent.innerHTML = 'Select a certificate to view';
             document.body.style.overflow = 'auto';
         }
     });
